@@ -5,11 +5,11 @@
 	"version": "0.1",
 	"permissions": [
 	],
-	"web_accessible_resources": ["libs/underscore-min.js", "libs/jquery-2.1.3.min.js"],
+	"web_accessible_resources": ["libs/underscore-min.js", "libs/jquery-2.1.3.min.js", "contentScript.js", "main.js"],
 	"content_scripts": [ 
 		{
 			"matches": ["https://piazza.com/class/*"],
-			"js": ["libs/underscore-min.js", "libs/jquery-2.1.3.min.js", "main.js"]
+			"js": ["contentScript.js"]
 		}
 	]
 }
