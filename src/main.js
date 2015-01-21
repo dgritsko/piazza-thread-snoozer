@@ -44,9 +44,9 @@ $(document).ready(function() {
 
 		if (getHiddenPosts()[selectedItemId]) {
 			// "Un-snooze" instead if this post is already snoozed.
-			$('#question_note_actions_dropdown').append('<li onclick="PEM.fire(\'snooze_question\');return false;">Un-snooze this post</li>');	
+			$('#question_note_actions_dropdown').append('<li onclick="PEM.fire(\'unsnooze_question\');return false;">Un-snooze this post</li>');	
 		} else {
-			$('#question_note_actions_dropdown').append('<li onclick="PEM.fire(\'unsnooze_question\');return false;">Snooze this post</li>');	
+			$('#question_note_actions_dropdown').append('<li onclick="PEM.fire(\'snooze_question\');return false;">Snooze this post</li>');	
 		}
 	};
 	
