@@ -26,6 +26,13 @@ $(document).ready(function() {
 		hiddenPosts[postId] = 1;
 		hidePosts(hiddenPosts);		
 	}
+	
+	function unhidePost(postId) {
+		var hiddenPosts = getHiddenPosts();
+		$('#' + postId).show();
+		delete(hiddenPosts[postId]);
+		saveHiddenPosts(hiddenPosts);
+	}
 
 	function getSelectedItemId() {
 		//return window.P.feed.selectedItem.id;
@@ -78,7 +85,8 @@ $(document).ready(function() {
 		
 		window.PEM.addListener('unsnooze_question', function() {
 			console.log('unsnooze_question fired');
-
+			var selectedItemId = getSelectedItemId();
+			unhidePost(selectedItemId);
 		});
 	}
 });
