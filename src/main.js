@@ -14,11 +14,11 @@ $(document).ready(function() {
 	}
 	
 	function saveHiddenPosts(hiddenPosts) {
-		localStorage.setItem('piazza-hiddenPosts', hiddenPosts);
+		localStorage.setItem('piazza-hiddenPosts', JSON.stringify(hiddenPosts));
 	}
 	
 	function getHiddenPosts() {
-		return localStorage.getItem('piazza-hiddenPosts') || {};
+		return JSON.parse(localStorage.getItem('piazza-hiddenPosts')) || {};
 	}
 	
 	function hidePost(postId) {
